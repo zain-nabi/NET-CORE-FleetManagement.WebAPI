@@ -1,0 +1,90 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="SQL\1.5\2021041907150000-Alter_Table_Bookings.sql" />
+	  <None Remove="SQL\1.5\2021042010050004-Insert_LookupcodeCategories_Quotations.sql" />
+	  <None Remove="SQL\1.5\2021042014350008-Alter_Procedure_proc_Customer_Select.sql" />
+	  <None Remove="SQL\1.5\2021042112320009-Alter_Table_Bookings.sql" />
+	  <None Remove="SQL\1.5\2021042112350010-Alter_Table_Bookings_Add_QuotationsLCID.sql" />
+	  <None Remove="SQL\1.5\2021042209130013-Alter_Table_VendorCode.sql" />
+	  <None Remove="SQL\1.5\2021042209200014-Alter_Procedure_proc_Customer_Insert_CustomerModel.sql" />
+	  <None Remove="SQL\1.5\2021042216100015-Alter_Procedure_proc_Customer_Update_CustomerModel.sql" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="SQL\1.5\2021041907150000-Alter_Table_Bookings.sql">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	  <EmbeddedResource Include="SQL\1.5\2021042010050004-Insert_LookupcodeCategories_Quotations.sql">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	  <EmbeddedResource Include="SQL\1.5\2021042014350008-Alter_Procedure_proc_Customer_Select.sql">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	  <EmbeddedResource Include="SQL\1.5\2021042112320009-Alter_Table_Bookings.sql">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	  <EmbeddedResource Include="SQL\1.5\2021042112350010-Alter_Table_Bookings_Add_QuotationsLCID.sql">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	  <EmbeddedResource Include="SQL\1.5\2021042209130013-Alter_Table_VendorCode.sql">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	  <EmbeddedResource Include="SQL\1.5\2021042209200014-Alter_Procedure_proc_Customer_Insert_CustomerModel.sql">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	  <EmbeddedResource Include="SQL\1.5\2021042216100015-Alter_Procedure_proc_Customer_Update_CustomerModel.sql">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Dapper" Version="2.0.35" />
+		<PackageReference Include="Dapper.Contrib" Version="2.0.35" />
+		<PackageReference Include="dbup" Version="4.5.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+		<PackageReference Include="Serilog" Version="2.9.0" />
+		<PackageReference Include="Serilog.Sinks.File" Version="4.1.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="5.5.1" />
+		<PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="5.5.1" />
+		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="5.5.1" />
+		<PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+		<PackageReference Include="MSTest.TestAdapter" Version="2.1.1" />
+		<PackageReference Include="MSTest.TestFramework" Version="2.1.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="SQL\1.5\2021041908000001-Create_Function_SplitBookingReasons.sql">
+	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	  </None>
+	  <None Update="SQL\1.5\2021041908100002-Create_Table_BookingReason.sql">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="SQL\1.5\2021041909150003-Create_Procedure_proc_Bookings_Insert_BookingsModel.sql">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="SQL\1.5\2021042010100005-Insert_Lookupcodes_Quotations.sql">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="SQL\1.5\2021042010130006-Create_Procedure_proc_Lookupcodes_Quotations.sql">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="SQL\1.5\2021042010570007-Create_Procedure_proc_Vehicle_GetVehicleByCustomerID.sql">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="SQL\1.5\2021042208100011-Create_Procedure_proc_Branches_GetActiveBranches.sql">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="SQL\1.5\2021042209100012-Create_Procedure_proc_BookingReason_GetByCustomerID.sql">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="SQL\1.5\2021042217150016-Create_Procedure_proc_Bookings_Update_BookingsModel.sql">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
+</Project>
